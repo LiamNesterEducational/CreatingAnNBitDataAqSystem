@@ -8,30 +8,30 @@ import math
 import matplotlib.pyplot as plt
 import random
 
-import Resolution as R
-import VoltageFraction as VF
-import FrequencyGeneration as FG
-import FilteredSignal as FS
+import Resolution as R                  # This allows us to import the Resolution function as a module
+import VoltageFraction as VF            # This allows us to import the Voltage Fraction function as a module
+import FrequencyGeneration as FG        # This allows us to import the Frequency Generation function as a module
+import FilteredSignal as FS             # This allows us to import the Filtered Signal function as a module
 
 #############################################################################
 
-## These are based on the measurment system
+## These are based on the measurment system and are set by the user
 UpperVoltage = 10 # V
 LowerVoltage = -10 # V
 
-## These are set by the user
+## These are also set by the user
 BitNumber = 2
 ActiveVoltage = 10 # V
 
+## These are set to generate the initial signal
 MainActiveFrequencyHz = 0.5 # Hz
-MainActiveFrequency = MainActiveFrequencyHz*2*math.pi
+MainActiveFrequency = MainActiveFrequencyHz*2*math.pi       # This converts the signal from Hz to rads/sec
 
 #############################################################################
 
 ## Empty Matrices
 
 size = 1111
-
 MATRIX = np.zeros((size,5), dtype = float)
 
 #############################################################################
